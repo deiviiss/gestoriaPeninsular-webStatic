@@ -66,15 +66,30 @@
     </header>
 
     <div class="main">
-      <h1>Comisión a cobrar</h1>
+      <div class="container-box">
 
+        <div class="form">
 
-      <div class="calculo">
-        <p>Cantidad a retirar</p>
-        <input type="text" id="cantidadRetiro">
-        <input type="submit" value=" A darle!" id="boton">
+          <h2 class="form__title">Retiro Parcial por Desempleo</h2>
+
+          <form action="/" class="form__cotizar">
+
+            <div class="form__input">
+
+              <div class="form__input-item">
+                <input type="text" id="cantidadRetiro" name="montoRetiro">
+                <label for="montoRetiro" class="label">Cantidad a Retirar</label>
+              </div>
+
+              <input type="submit" value="Calcular" id="btnCalcular" class="btn btn-success btn-block">
+
+            </div>
+
+          </form>
+
+        </div>
+
       </div>
-
     </div>
 
 
