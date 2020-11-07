@@ -6,19 +6,23 @@ document.querySelector('.header__logo--btnDesktop').addEventListener('click', ()
 let cantidadARetirar = document.getElementById("cantidadRetiro");
 let btnCalcular = document.getElementById("btnCalcular")
 
+
+// eventos
+
 btnCalcular.addEventListener("click", calcularRetiro)
 
-function calcularRetiro() {
-  let aseguramiento;
-  let asesoria;
 
+//función para calcular cotización
+
+function calcularRetiro(e) {
   let cantidad = cantidadARetirar.value;
-
 
   if (cantidad > 30999) {
 
     let cobro = cantidad * .25;
-    alert("Asesoría: $" + cobro + "\n" + "Aseguramiento: Incluido\n" + "Total: $" + cobro)
+    let mensaje = "Asesoría: $" + cobro + "<br/>" + "Aseguramiento: Incluido <br/>" + "Total: $" + cobro
+
+    alertify.alert('Cotización', mensaje);
   }
 
   else if (cantidad > 24999) {
@@ -26,28 +30,34 @@ function calcularRetiro() {
     let cobro = cantidad * .20;
     let aseguramiento = 2000
     let cobroCliente = cobro + aseguramiento
+    let mensaje = "Asesoría: $" + cobro + "<br/>" + "Aseguramiento: $" + aseguramiento + "<br/>" + "Total: $ " + cobroCliente
 
-    alert("Asesoría: $" + cobro + "\n" + "Aseguramiento: $" + aseguramiento + "\n" + "Total: $ " + cobroCliente)
+    alertify.alert('Cotización', mensaje)
   }
 
   else if (cantidad > 14999) {
     let cobro = cantidad * .20;
     let aseguramiento = 1700
     let cobroCliente = cobro + aseguramiento;
+    let mensaje = "Asesoría: $" + cobro + "<br/>" + "Aseguramiento: $" + aseguramiento +
+      "<br/>" + "Total: $" + cobroCliente
 
-    alert("Asesoría: $" + cobro + "\n" + "Aseguramiento: $" + aseguramiento + "\n" + "Total: $" + cobroCliente)
+
+    alertify.alert('Cotización', mensaje)
   }
 
   else {
     let cobro = cantidad * .20
     let aseguramiento = 1300
     let cobroCliente = cobro + aseguramiento
+    let = "Asesoría: $" + cobro + "<br/>" + "Aseguramiento: $" + aseguramiento + "<br/>" + "Total: $" + cobroCliente
 
-    alert("Asesoría: $" + cobro + "\n" + "Aseguramiento: $" + aseguramiento + "\n" + "Total: $" + cobroCliente)
+    alertify.alert('Cotización', mensaje)
   }
 
-}
+  e.preventDefault()
 
+}
 
 //function focus & blur
 
