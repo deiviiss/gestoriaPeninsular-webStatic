@@ -19,6 +19,22 @@ $test: 2px solid $color-red;
 $borde: 2px;
 $font-family: "Roboto", Arial;
 
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  // border: 1px solid green;
+  -webkit-text-fill-color: black;
+  // -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 //basic styles
 
 * {
@@ -116,7 +132,7 @@ body {
       margin-left: 10px;
       border-radius: $borde;
       background-color: rgba(35, 39, 59, 0.7);
-      width: 80%;
+      width: 27%;
 
       li {
         font-size: 12px;
@@ -265,5 +281,75 @@ body {
     :hover {
       text-decoration: underline;
     }
+  }
+}
+
+/*Responsive design*/
+
+@media (max-width: 700px) {
+  .header__logo {
+    .header__logo--btnDesktop {
+      display: none;
+    }
+    .header__logo--btnMobile {
+      display: block;
+    }
+  }
+
+  .header__nav {
+    position: initial;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color-primary;
+    height: 100%;
+    padding: 30px;
+    opacity: 0.9;
+    transform: translateX(-700px);
+    z-index: 3;
+    width: 85%;
+    transition: transform 1s ease-in-out;
+
+    font-size: 24px;
+
+    .nav__main {
+      p {
+        margin: 0 40px 0 0;
+        cursor: pointer;
+        color: $color-white;
+      }
+
+      .nav__menu {
+        li {
+          padding: 10px;
+          a {
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    .nav__main:hover {
+      p {
+        border-bottom: 2px solid $color-white;
+      }
+      .nav__menu {
+        :hover a {
+          border-bottom: $borde solid $color-white;
+        }
+      }
+    }
+  }
+
+  .nav.show {
+    transform: translateX(-20px);
   }
 }

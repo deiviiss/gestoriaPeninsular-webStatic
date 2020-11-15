@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestoría Peninsular</title>
+
+  <link rel="icon" type="img/png" href="../img/logo1.png">
+
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!--  boostrap 4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- CSS alertify -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+  <!-- Default theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+  <!-- Semantic UI theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+  <!-- Bootstrap theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+  <!-- styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <div class="container-wrap">
+
+    <header class="header">
+
+      <div class="header__logo">
+
+        <a href="/index.html"><img src="img/logo2.png" alt="Logo"></a>
+
+        <div class="header__logo--btnDesktop">
+          <i class="fas fa-bars fa-2x"></i>
+        </div>
+
+        <div class="header__logo--btnMobile">
+          <i class="fas fa-bars fa-2x"></i>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- Aquí inicia el navbar -->
+      <div class="header__nav">
+
+        <nav class="nav">
+          <div class="nav__main">
+
+            <p>Calculador</p>
+
+            <ul class="nav__menu">
+              <li class="nav__menu--item">
+                <a href="/calcularDesempleo.html">Retiro por desempleo</a>
+              </li>
+
+              <li class="nav__menu--item">
+                <a href="/calcularComision.html">Comisión</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="nav__main">
+
+            <p>Recursos</p>
+
+            <ul class="nav__menu">
+              <li class="nav__menu--item">
+                <a href="https://serviciosdigitales.imss.gob.mx/semanascotizadas-web/usuarios/IngresoAsegurado">Semanas
+                  Cotizadas</a>
+              </li>
+
+              <li class="nav__menu--item">
+                <a href="https://www.gob.mx/curp/">Curp</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="nav__main">
+
+            <p>Afores</p>
+
+            <ul class="nav__menu">
+              <li class="nav__menu--item">
+                <a href="https://miaforedigitalxxib.xxi-banorte.com/Paginas/Login.aspx?ReturnUrl=%2f">XXI Banorte</a>
+              </li>
+
+              <li class="nav__menu--item">
+                <a href="https://afore.suramexico.com/afore/programar-cita.html">Sura</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="nav__main">
+
+            <p>Correciones</p>
+
+            <ul class="nav__menu">
+              <li class="nav__menu--item">
+                <a href="/">Correción CURP</a>
+              </li>
+
+              <li class="nav__menu--item">
+                <a href="/">Unificación NSS</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </nav>
+      </div>
+
+      <!-- Aquí acaba el navbar -->
+
+    </header>
+
+    <!-- Aquí inicia la sección principal -->
+
+    <div class="main">
+      <div class="container-box">
+
+        <div class="form">
+
+          <h2 class="form__title">Comisión asesores</h2>
+
+          <form action="" class="form__cotizar">
+
+            <div class="form__input">
+              <div class="form__input-item">
+                <select id="sucursalRetiro">
+                  <option value=""></option>
+                  <option value="comisionLocal">Campeche</option>
+                  <option value="comisionForanea">Cancun</option>
+                  <option value="comisionLocal">Candelaria</option>
+                  <option value="comisionForanea">Carmen</option>
+                  <option value="comisionForanea">Chetumal</option>
+                  <option value="comisionForanea">Cozumel</option>
+                  <option value="comisionLocal">Escarcega</option>
+                </select>
+
+                <label for="sucursal" class='label active'>Sucursal</label>
+              </div>
+            </div>
+
+            <div class="form__input">
+
+              <div class="form__input-item">
+                <input type="text" id="cantidadRetiro" name="montoRetiro">
+                <label for="montoRetiro" class="label">Cantidad a Retirar</label>
+              </div>
+
+              <!-- <input type="button" value="Calcular" id="btnCalcular" class="btn btn-success btn-block"> -->
+
+              <a href="#" class="btn btn-info btn-block" id="btnCalcular">Calcular</a>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Aquí termina la sección principal -->
+
+    <!-- Aquí inicia el footer -->
+
+    <footer class="footer">
+      <a href="/">Términos de uso</a>
+      <a href="/">Declaración de privacidad</a>
+      <a href="/">Centro de ayuda</a>
+    </footer>
+  </div>
+
+  <!-- Aquí termina el footer -->
+
+  <script src="https://kit.fontawesome.com/f73142c108.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <!-- alertify -->
+
+  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+  <!-- scripts -->
+  <script src="js/scripts.js"></script>
+
+  <script>
+    let cantidadARetirar = document.getElementById("cantidadRetiro");
+    let btnCalcular = document.getElementById("btnCalcular")
+    let sucursal = document.getElementById("sucursalRetiro")
+
+    //envent
+    btnCalcular.addEventListener("click", calcularComision)
+  </script>
+
+</body>
+
+</html>

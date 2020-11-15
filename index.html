@@ -36,7 +36,7 @@
 
       <div class="header__logo">
 
-        <a href="/"><img src="img/logo2.png" alt="Logo"></a>
+        <a href="/index.html"><img src="img/logo2.png" alt="Logo"></a>
 
         <div class="header__logo--btnDesktop">
           <i class="fas fa-bars fa-2x"></i>
@@ -50,56 +50,100 @@
 
       <hr>
 
+      <!-- Aquí inicia el navbar -->
       <div class="header__nav">
 
         <nav class="nav">
           <div class="nav__main">
 
-            <p>Zona</p>
+            <p>Calculador</p>
 
             <ul class="nav__menu">
               <li class="nav__menu--item">
-                <a href="/">Campeche</a>
+                <a href="/calcularDesempleo.html">Retiro por desempleo</a>
               </li>
 
               <li class="nav__menu--item">
-                <a href="/">Chetumal</a>
+                <a href="/calcularComision.html">Comisión</a>
               </li>
             </ul>
 
           </div>
+
+          <div class="nav__main">
+
+            <p>Recursos</p>
+
+            <ul class="nav__menu">
+              <li class="nav__menu--item">
+                <a href="https://serviciosdigitales.imss.gob.mx/semanascotizadas-web/usuarios/IngresoAsegurado">Semanas
+                  Cotizadas</a>
+              </li>
+
+              <li class="nav__menu--item">
+                <a href="https://www.gob.mx/curp/">Curp</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="nav__main">
+
+            <p>Afores</p>
+
+            <ul class="nav__menu">
+              <li class="nav__menu--item">
+                <a href="https://miaforedigitalxxib.xxi-banorte.com/Paginas/Login.aspx?ReturnUrl=%2f">XXI Banorte</a>
+              </li>
+
+              <li class="nav__menu--item">
+                <a href="https://afore.suramexico.com/afore/programar-cita.html">Sura</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="nav__main">
+
+            <p>Correciones</p>
+
+            <ul class="nav__menu">
+              <li class="nav__menu--item">
+                <a href="/">Correción CURP</a>
+              </li>
+
+              <li class="nav__menu--item">
+                <a href="/">Unificación NSS</a>
+              </li>
+            </ul>
+
+          </div>
+
         </nav>
       </div>
 
+      <!-- Aquí acaba el navbar -->
+
     </header>
+
+    <!-- Aquí inicia la sección principal -->
 
     <div class="main">
       <div class="container-box">
 
         <div class="form">
 
-          <h2 class="form__title">Retiro Parcial por Desempleo</h2>
+          <a href="/calcularDesempleo.html" class="btn btn-info btn-block">Retiro por desempleo</a>
 
-          <form action="" class="form__cotizar">
-
-            <div class="form__input">
-
-              <div class="form__input-item">
-                <input type="text" id="cantidadRetiro" name="montoRetiro">
-                <label for="montoRetiro" class="label">Cantidad a Retirar</label>
-              </div>
-
-              <input type="submit" value="Calcular" id="btnCalcular" class="btn btn-success btn-block">
-
-            </div>
-
-          </form>
+          <a href="/calcularComision.html" class="btn btn-info btn-block">Comisíon asesores</a>
 
         </div>
-
       </div>
     </div>
 
+    <!-- Aquí termina la sección principal -->
+
+    <!-- Aquí inicia el footer -->
 
     <footer class="footer">
       <a href="/">Términos de uso</a>
@@ -107,6 +151,8 @@
       <a href="/">Centro de ayuda</a>
     </footer>
   </div>
+
+  <!-- Aquí termina el footer -->
 
   <script src="https://kit.fontawesome.com/f73142c108.js" crossorigin="anonymous"></script>
 
