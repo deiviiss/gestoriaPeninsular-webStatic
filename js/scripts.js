@@ -127,7 +127,11 @@ function comisionForanea() {
   }
 
   else {
-    c
+    let comision = cantidad * .05
+
+    let mensaje = "Comisión: $" + comision.toFixed(2)
+
+    mandarAlert(mensaje)
   }
 }
 
