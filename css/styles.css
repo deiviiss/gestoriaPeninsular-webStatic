@@ -76,6 +76,10 @@ body .container-wrap {
   margin: 5px;
 }
 
+.header img {
+  width: 75%;
+}
+
 .header__logo {
   display: -webkit-box;
   display: -ms-flexbox;

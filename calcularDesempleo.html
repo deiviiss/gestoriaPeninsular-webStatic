@@ -34,42 +34,11 @@
 
     <header class="header">
 
-      <div class="header__logo">
-
-        <a href="index.html"><img src="img/logo2.png" alt="Logo"></a>
-
-        <div class="header__logo--btnDesktop">
-          <i class="fas fa-bars fa-2x"></i>
-        </div>
-
-        <div class="header__logo--btnMobile">
-          <i class="fas fa-bars fa-2x"></i>
-        </div>
-
-      </div>
-
-      <hr>
-
       <!-- Aquí inicia el navbar -->
+
       <div class="header__nav">
-
-        <nav class="nav">
-          <div class="nav__main">
-
-            <p>Calculador</p>
-
-            <ul class="nav__menu">
-              <li class="nav__menu--item">
-                <a href="calcularDesempleo.html">Retiro por desempleo</a>
-              </li>
-
-              <li class="nav__menu--item">
-                <a href="calcularComision.html">Comisión</a>
-              </li>
-            </ul>
-
-          </div>
-
+        <!-- <nav class="nav">
+        
           <div class="nav__main">
 
             <p>Recursos</p>
@@ -119,11 +88,72 @@
 
           </div>
 
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #f2f2f2;">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo2.png" alt="Logo GP" loading="lazy">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="margin-inline-start: 10%;">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Calculador
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="calcularDesempleo.html">Retiro por desempleo</a>
+                  <a class="dropdown-item" href="calcularComision.html">Comisión</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Recursos
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item"
+                    href="https://serviciosdigitales.imss.gob.mx/semanascotizadas-web/usuarios/IngresoAsegurado">Semanas
+                    Cotizadas</a>
+                  <a class="dropdown-item" href="https://www.gob.mx/curp/">CURP</a>
+                  <a class="dropdown-item"
+                    href="https://app.cfe.mx/Aplicaciones/CCFE/SolicitudesCFE/Solicitudes/ConsultaTuReciboLuzGmx.aspx">CFE</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Correciones
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="">Correción CURP</a>
+                  <a class="dropdown-item" href="">Correción NSS</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
         </nav>
+
       </div>
 
-      <!-- Aquí acaba el navbar -->
-
+      <hr>
     </header>
 
     <!-- Aquí inicia la sección principal -->
