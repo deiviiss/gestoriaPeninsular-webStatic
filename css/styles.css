@@ -80,92 +80,6 @@ body .container-wrap {
   width: 75%;
 }
 
-.header__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 10px;
-}
-
-.header__logo img {
-  width: 75%;
-}
-
-.header__nav {
-  position: relative;
-}
-
-.nav {
-  display: none;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-size: 14px;
-  position: absolute;
-  z-index: 3;
-}
-
-.nav .nav__main {
-  display: block;
-  cursor: pointer;
-}
-
-.nav .nav__main a {
-  color: #23273b;
-  text-decoration: none;
-}
-
-.nav .nav__main p {
-  margin: 0;
-  margin-right: 60px;
-}
-
-.nav .nav__main .nav__menu {
-  display: none;
-  text-decoration: none;
-  list-style: none;
-  padding: 5px;
-  margin-top: 1px;
-  margin-left: 10px;
-  border-radius: 2px;
-  background-color: rgba(35, 39, 59, 0.7);
-  width: 27%;
-}
-
-.nav .nav__main .nav__menu li {
-  font-size: 12px;
-}
-
-.nav .nav__main .nav__menu li a {
-  color: #f2f2f2;
-  text-decoration: none;
-}
-
-.nav .nav__main:hover p {
-  border-bottom: 2px solid #23273b;
-}
-
-.nav .nav__main:hover .nav__menu {
-  display: block;
-  position: absolute;
-}
-
-.nav .nav__main:hover .nav__menu :hover a {
-  border-bottom: 2px solid #f2f2f2;
-}
-
-.nav.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,7 +158,7 @@ body .container-wrap {
   margin-bottom: 32px;
 }
 
-.main .container-box .form .form__cotizar .form__input .form__input-item input[type="text"] {
+.main .container-box .form .form__cotizar .form__input .form__input-item input[type="number"] {
   padding-right: 20px;
   padding-top: 12px;
   font-family: "Roboto", Arial;
@@ -258,7 +172,7 @@ body .container-wrap {
   text-align: center;
 }
 
-.main .container-box .form .form__cotizar .form__input .form__input-item input[type="text"]:focus, .main .container-box .form .form__cotizar .form__input .form__input-item input[type="text"]:active {
+.main .container-box .form .form__cotizar .form__input .form__input-item input[type="number"]:focus, .main .container-box .form .form__cotizar .form__input .form__input-item input[type="number"]:active {
   outline: none;
   border-bottom: 2px solid #23273b;
 }
@@ -311,67 +225,15 @@ body .container-wrap {
 }
 
 /*Responsive design*/
-@media (max-width: 700px) {
-  .header__nav {
-    position: initial;
-  }
-  .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #23273b;
-    height: 100%;
-    padding: 30px;
-    opacity: 0.9;
-    -webkit-transform: translateX(-700px);
-            transform: translateX(-700px);
-    z-index: 3;
-    width: 85%;
-    -webkit-transition: -webkit-transform 1s ease-in-out;
-    transition: -webkit-transform 1s ease-in-out;
-    transition: transform 1s ease-in-out;
-    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
-    font-size: 24px;
-  }
-  .nav .nav__main p {
-    margin: 0 40px 0 0;
-    cursor: pointer;
-    color: #f2f2f2;
-  }
-  .nav .nav__main .nav__menu li {
-    padding: 10px;
-  }
-  .nav .nav__main .nav__menu li a {
-    color: #f2f2f2;
-  }
-  .nav .nav__main:hover p {
-    border-bottom: 2px solid #f2f2f2;
-  }
-  .nav .nav__main:hover .nav__menu :hover a {
-    border-bottom: 2px solid #f2f2f2;
-  }
-  .nav.show {
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
+@media (max-width: 991px) {
+  .header img {
+    width: 50%;
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 425px) {
   .header img {
-    width: 105%;
+    width: 125%;
   }
   .header .navbar-brand {
     width: 54% !important;

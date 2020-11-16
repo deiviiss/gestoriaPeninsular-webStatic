@@ -212,7 +212,7 @@ function calcularRetiroForaneo() {
   let cantidad = cantidadARetirar.value;
 
   if (cantidad > 30999) {
-    let cobroPesos = cantidad * .25;
+    let cobroPesos = cantidad * .30;
     let libreClientePesos = cantidad - cobroPesos
 
     let cobro = formatterPeso.format(cobroPesos)

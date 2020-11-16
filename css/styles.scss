@@ -80,84 +80,6 @@ body {
   }
 }
 
-.header__logo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-
-  img {
-    width: 75%;
-  }
-}
-
-.header__nav {
-  position: relative;
-}
-
-.nav {
-  display: none;
-  justify-content: flex-end;
-  font-size: 14px;
-  position: absolute;
-  z-index: 3;
-
-  .nav__main {
-    display: block;
-    cursor: pointer;
-
-    a {
-      color: $color-primary;
-      text-decoration: none;
-    }
-
-    p {
-      margin: 0;
-      margin-right: 60px;
-    }
-
-    .nav__menu {
-      display: none;
-      text-decoration: none;
-      list-style: none;
-      padding: 5px;
-      margin-top: 1px;
-      margin-left: 10px;
-      border-radius: $borde;
-      background-color: rgba(35, 39, 59, 0.7);
-      width: 27%;
-
-      li {
-        font-size: 12px;
-
-        a {
-          color: $color-white;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
-  .nav__main:hover {
-    p {
-      border-bottom: $borde solid $color-primary;
-    }
-
-    .nav__menu {
-      display: block;
-      position: absolute;
-
-      :hover a {
-        border-bottom: $borde solid $color-white;
-      }
-    }
-  }
-}
-
-.nav.show {
-  display: flex;
-}
-
 //main
 
 .main {
@@ -212,7 +134,7 @@ body {
             position: relative;
             margin-bottom: 32px;
 
-            input[type="text"] {
+            input[type="number"] {
               padding-right: 20px;
               padding-top: 12px;
               font-family: $font-family;
@@ -280,69 +202,19 @@ body {
 
 /*Responsive design*/
 
-@media (max-width: 700px) {
-  .header__nav {
-    position: initial;
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: $color-primary;
-    height: 100%;
-    padding: 30px;
-    opacity: 0.9;
-    transform: translateX(-700px);
-    z-index: 3;
-    width: 85%;
-    transition: transform 1s ease-in-out;
-
-    font-size: 24px;
-
-    .nav__main {
-      p {
-        margin: 0 40px 0 0;
-        cursor: pointer;
-        color: $color-white;
-      }
-
-      .nav__menu {
-        li {
-          padding: 10px;
-          a {
-            color: $color-white;
-          }
-        }
-      }
+@media (max-width: 991px) {
+  .header {
+    img {
+      width: 50%;
+      // border: $test;
     }
-
-    .nav__main:hover {
-      p {
-        border-bottom: 2px solid $color-white;
-      }
-      .nav__menu {
-        :hover a {
-          border-bottom: $borde solid $color-white;
-        }
-      }
-    }
-  }
-
-  .nav.show {
-    transform: translateX(-20px);
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 425px) {
   .header {
     img {
-      width: 105%;
+      width: 125%;
     }
 
     .navbar-brand {
