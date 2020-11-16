@@ -225,15 +225,21 @@ body .container-wrap {
 }
 
 /*Responsive design*/
+@media (min-width: 1024px) {
+  .header img {
+    width: 43%;
+  }
+}
+
 @media (max-width: 991px) {
   .header img {
-    width: 50%;
+    width: 70%;
   }
 }
 
 @media (max-width: 425px) {
   .header img {
-    width: 125%;
+    width: 135%;
   }
   .header .navbar-brand {
     width: 54% !important;

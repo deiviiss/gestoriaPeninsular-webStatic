@@ -202,10 +202,19 @@ body {
 
 /*Responsive design*/
 
+@media (min-width: 1024px) {
+  .header {
+    img {
+      width: 43%;
+      // border: $test;
+    }
+  }
+}
+
 @media (max-width: 991px) {
   .header {
     img {
-      width: 50%;
+      width: 70%;
       // border: $test;
     }
   }
@@ -214,7 +223,7 @@ body {
 @media (max-width: 425px) {
   .header {
     img {
-      width: 125%;
+      width: 135%;
     }
 
     .navbar-brand {
