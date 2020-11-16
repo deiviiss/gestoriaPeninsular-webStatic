@@ -89,16 +89,6 @@ body {
   img {
     width: 75%;
   }
-
-  .header__logo--btnDesktop {
-    color: rgba(35, 39, 59, 0.8);
-    cursor: pointer;
-  }
-
-  .header__logo--btnMobile {
-    display: none;
-    color: rgba(35, 39, 59, 0.8);
-  }
 }
 
 .header__nav {
@@ -291,15 +281,6 @@ body {
 /*Responsive design*/
 
 @media (max-width: 700px) {
-  .header__logo {
-    .header__logo--btnDesktop {
-      display: none;
-    }
-    .header__logo--btnMobile {
-      display: block;
-    }
-  }
-
   .header__nav {
     position: initial;
   }
@@ -355,5 +336,17 @@ body {
 
   .nav.show {
     transform: translateX(-20px);
+  }
+}
+
+@media (max-width: 370px) {
+  .header {
+    img {
+      width: 105%;
+    }
+
+    .navbar-brand {
+      width: 54% !important;
+    }
   }
 }
