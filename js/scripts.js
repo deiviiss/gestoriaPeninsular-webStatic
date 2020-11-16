@@ -1,21 +1,16 @@
 
-//menu hamburger
-
-document.querySelector('.header__logo--btnDesktop').addEventListener('click', () => {
-  console.log('Click')
-  document.querySelector('.nav').classList.toggle('show')
-})
-
-document.querySelector('.header__logo--btnMobile').addEventListener('click', () => {
-  console.log('Click')
-  document.querySelector('.nav').classList.toggle('show')
-})
-
 // función para enviar mensaje
 
 function mandarAlert(mensaje) {
   alertify.alert('Cotización GP', mensaje);
 }
+
+//función para cambiar a moneda
+
+const formatterPeso = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD'
+})
 
 //function focus & blur
 
@@ -82,23 +77,26 @@ function comisionLocal() {
   let cantidad = cantidadARetirar.value;
 
   if (cantidad > 36965) {
-    let comision = cantidad * .05
+    let comisionPesos = cantidad * .05
+    let comision = formatterPeso.format(comisionPesos)
 
-    let mensaje = "Comisión: $" + comision.toFixed(2)
+    let mensaje = "Comisión: " + comision
 
     mandarAlert(mensaje)
   }
   else if (cantidad > 30800) {
-    let comision = 1500
+    let comisionPesos = 1500
+    let comision = formatterPeso.format(comisionPesos)
 
-    let mensaje = "Comisión: $" + comision.toFixed(2)
+    let mensaje = "Comisión: " + comision
 
     mandarAlert(mensaje)
   }
   else if (cantidad > 12000) {
-    let comision = 1000
+    let comisionPesos = 1000
+    let comision = formatterPeso.format(comisionPesos)
 
-    let mensaje = "Comisión: $" + comision.toFixed(2)
+    let mensaje = "Comisión: " + comision
 
     mandarAlert(mensaje)
   }
@@ -117,8 +115,8 @@ function comisionLocal() {
 //función para calcular comisión foranéa
 
 function comisionForanea() {
-  let cantidad = cantidadARetirar.value
 
+  let cantidad = cantidadARetirar.value
 
   if (cantidad == "") {
     let mensaje = "Escribe una cantidad"
@@ -127,9 +125,10 @@ function comisionForanea() {
   }
 
   else {
-    let comision = cantidad * .05
+    let comisionPesos = cantidad * .05
+    let comision = formatterPeso.format(comisionPesos)
 
-    let mensaje = "Comisión: $" + comision.toFixed(2)
+    let mensaje = "Comisión: " + comision
 
     mandarAlert(mensaje)
   }
@@ -141,45 +140,61 @@ function calcularRetiroLocal() {
   let cantidad = cantidadARetirar.value;
 
   if (cantidad > 30999) {
-    let cobro = cantidad * .25;
-    let libreCliente = cantidad - cobro
+    let cobroPesos = cantidad * .25;
+    let libreClientePesos = cantidad - cobroPesos
 
+    let cobro = formatterPeso.format(cobroPesos)
+    let libreCliente = formatterPeso.format(libreClientePesos)
 
-    let mensaje = "Asesoría: $" + cobro.toFixed(2) + "<br/>" + "Aseguramiento: Incluido <br/>" + "Total cobro: $" + cobro.toFixed(2) + "<br/>" + "<br/>" + "Cliente: $" + libreCliente.toFixed(2)
+    let mensaje = "Asesoría: " + cobro + "<br/>" + "Aseguramiento: Incluido <br/>" + "Total cobro: " + cobro + "<br/>" + "<br/>" + "Cliente: " + libreCliente
 
     mandarAlert(mensaje)
   }
 
   else if (cantidad > 24999) {
-    let cobro = cantidad * .20;
-    let aseguramiento = 2000
-    let cobroCliente = cobro + aseguramiento
-    let libreCliente = cantidad - cobroCliente
+    let cobroPesos = cantidad * .20;
+    let aseguramientoPesos = 2000
+    let cobroClientePesos = cobroPesos + aseguramientoPesos
+    let libreClientePesos = cantidad - cobroClientePesos
 
-    let mensaje = "Asesoría: $" + cobro.toFixed(2) + "<br/>" + "Aseguramiento: $" + aseguramiento.toFixed(2) + "<br/>" + "Total: $ " + cobroCliente.toFixed(2) + "<br/>" + "<br/>" + "Cliente: $" + libreCliente.toFixed(2)
+    let cobro = formatterPeso.format(cobroPesos)
+    let aseguramiento = formatterPeso.format(aseguramientoPesos)
+    let cobroCliente = formatterPeso.format(cobroClientePesos)
+    let libreCliente = formatterPeso.format(libreClientePesos)
+
+    let mensaje = "Asesoría: " + cobro + "<br/>" + "Aseguramiento: " + aseguramiento + "<br/>" + "Total: " + cobroCliente + "<br/>" + "<br/>" + "Cliente: " + libreCliente
 
     mandarAlert(mensaje)
   }
 
   else if (cantidad > 14999) {
-    let cobro = cantidad * .20;
-    let aseguramiento = 1700.00
-    let cobroCliente = cobro + aseguramiento;
-    let libreCliente = cantidad - cobroCliente
+    let cobroPesos = cantidad * .20;
+    let aseguramientoPesos = 1700
+    let cobroClientePesos = cobroPesos + aseguramientoPesos
+    let libreClientePesos = cantidad - cobroClientePesos
 
-    let mensaje = "Asesoría: $" + cobro.toFixed(2) + "<br/>" + "Aseguramiento: $" + aseguramiento.toFixed(2) +
-      "<br/>" + "Total: $" + cobroCliente.toFixed(2) + "<br/>" + "<br/>" + "Cliente: $" + libreCliente.toFixed(2)
+    let cobro = formatterPeso.format(cobroPesos)
+    let aseguramiento = formatterPeso.format(aseguramientoPesos)
+    let cobroCliente = formatterPeso.format(cobroClientePesos)
+    let libreCliente = formatterPeso.format(libreClientePesos)
+
+    let mensaje = "Asesoría: " + cobro + "<br/>" + "Aseguramiento: " + aseguramiento + "<br/>" + "Total: " + cobroCliente + "<br/>" + "<br/>" + "Cliente: " + libreCliente
 
     mandarAlert(mensaje)
   }
 
   else if (cantidad > 0) {
-    let cobro = cantidad * .20
-    let aseguramiento = 1300
-    let cobroCliente = cobro + aseguramiento
-    let libreCliente = cantidad - cobroCliente
+    let cobroPesos = cantidad * .20;
+    let aseguramientoPesos = 1300
+    let cobroClientePesos = cobroPesos + aseguramientoPesos
+    let libreClientePesos = cantidad - cobroClientePesos
 
-    let mensaje = "Asesoría: $" + cobro.toFixed(2) + "<br/>" + "Aseguramiento: $" + aseguramiento.toFixed(2) + "<br/>" + "Total: $" + cobroCliente.toFixed(2) + "<br/>" + "<br/>" + "Cliente: $" + libreCliente.toFixed(2)
+    let cobro = formatterPeso.format(cobroPesos)
+    let aseguramiento = formatterPeso.format(aseguramientoPesos)
+    let cobroCliente = formatterPeso.format(cobroClientePesos)
+    let libreCliente = formatterPeso.format(libreClientePesos)
+
+    let mensaje = "Asesoría: " + cobro + "<br/>" + "Aseguramiento: " + aseguramiento + "<br/>" + "Total: " + cobroCliente + "<br/>" + "<br/>" + "Cliente: " + libreCliente
 
     mandarAlert(mensaje)
   }
@@ -189,9 +204,6 @@ function calcularRetiroLocal() {
 
     mandarAlert(mensaje)
   }
-
-  // e.preventDefault()
-
 }
 
 //función para calcular retiro foraneo
@@ -200,45 +212,61 @@ function calcularRetiroForaneo() {
   let cantidad = cantidadARetirar.value;
 
   if (cantidad > 30999) {
-    let cobro = cantidad * .30;
-    let libreCliente = cantidad - cobro
+    let cobroPesos = cantidad * .25;
+    let libreClientePesos = cantidad - cobroPesos
 
+    let cobro = formatterPeso.format(cobroPesos)
+    let libreCliente = formatterPeso.format(libreClientePesos)
 
-    let mensaje = "Asesoría: $" + cobro.toFixed(2) + "<br/>" + "Aseguramiento: Incluido <br/>" + "Total cobro: $" + cobro.toFixed(2) + "<br/>" + "<br/>" + "Cliente: $" + libreCliente.toFixed(2)
+    let mensaje = "Asesoría: " + cobro + "<br/>" + "Aseguramiento: Incluido <br/>" + "Total cobro: " + cobro + "<br/>" + "<br/>" + "Cliente: " + libreCliente
 
     mandarAlert(mensaje)
   }
 
   else if (cantidad > 24999) {
-    let cobro = cantidad * .25;
-    let aseguramiento = 2000
-    let cobroCliente = cobro + aseguramiento
-    let libreCliente = cantidad - cobroCliente
+    let cobroPesos = cantidad * .25;
+    let aseguramientoPesos = 2000
+    let cobroClientePesos = cobroPesos + aseguramientoPesos
+    let libreClientePesos = cantidad - cobroClientePesos
 
-    let mensaje = "Asesoría: $" + cobro.toFixed(2) + "<br/>" + "Aseguramiento: $" + aseguramiento.toFixed(2) + "<br/>" + "Total: $ " + cobroCliente.toFixed(2) + "<br/>" + "<br/>" + "Cliente: $" + libreCliente.toFixed(2)
+    let cobro = formatterPeso.format(cobroPesos)
+    let aseguramiento = formatterPeso.format(aseguramientoPesos)
+    let cobroCliente = formatterPeso.format(cobroClientePesos)
+    let libreCliente = formatterPeso.format(libreClientePesos)
+
+    let mensaje = "Asesoría: " + cobro + "<br/>" + "Aseguramiento: " + aseguramiento + "<br/>" + "Total: " + cobroCliente + "<br/>" + "<br/>" + "Cliente: " + libreCliente
 
     mandarAlert(mensaje)
   }
 
   else if (cantidad > 14999) {
-    let cobro = cantidad * .25;
-    let aseguramiento = 1700.00
-    let cobroCliente = cobro + aseguramiento;
-    let libreCliente = cantidad - cobroCliente
+    let cobroPesos = cantidad * .25;
+    let aseguramientoPesos = 1700
+    let cobroClientePesos = cobroPesos + aseguramientoPesos
+    let libreClientePesos = cantidad - cobroClientePesos
 
-    let mensaje = "Asesoría: $" + cobro.toFixed(2) + "<br/>" + "Aseguramiento: $" + aseguramiento.toFixed(2) +
-      "<br/>" + "Total: $" + cobroCliente.toFixed(2) + "<br/>" + "<br/>" + "Cliente: $" + libreCliente.toFixed(2)
+    let cobro = formatterPeso.format(cobroPesos)
+    let aseguramiento = formatterPeso.format(aseguramientoPesos)
+    let cobroCliente = formatterPeso.format(cobroClientePesos)
+    let libreCliente = formatterPeso.format(libreClientePesos)
+
+    let mensaje = "Asesoría: " + cobro + "<br/>" + "Aseguramiento: " + aseguramiento + "<br/>" + "Total: " + cobroCliente + "<br/>" + "<br/>" + "Cliente: " + libreCliente
 
     mandarAlert(mensaje)
   }
 
   else if (cantidad > 0) {
-    let cobro = cantidad * .25
-    let aseguramiento = 1300
-    let cobroCliente = cobro + aseguramiento
-    let libreCliente = cantidad - cobroCliente
+    let cobroPesos = cantidad * .25;
+    let aseguramientoPesos = 1300
+    let cobroClientePesos = cobroPesos + aseguramientoPesos
+    let libreClientePesos = cantidad - cobroClientePesos
 
-    let mensaje = "Asesoría: $" + cobro.toFixed(2) + "<br/>" + "Aseguramiento: $" + aseguramiento.toFixed(2) + "<br/>" + "Total: $" + cobroCliente.toFixed(2) + "<br/>" + "<br/>" + "Cliente: $" + libreCliente.toFixed(2)
+    let cobro = formatterPeso.format(cobroPesos)
+    let aseguramiento = formatterPeso.format(aseguramientoPesos)
+    let cobroCliente = formatterPeso.format(cobroClientePesos)
+    let libreCliente = formatterPeso.format(libreClientePesos)
+
+    let mensaje = "Asesoría: " + cobro + "<br/>" + "Aseguramiento: " + aseguramiento + "<br/>" + "Total: " + cobroCliente + "<br/>" + "<br/>" + "Cliente: " + libreCliente
 
     mandarAlert(mensaje)
   }
