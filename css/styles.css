@@ -239,7 +239,7 @@ body .container-wrap {
 
 @media (max-width: 425px) {
   .header img {
-    width: 135%;
+    width: 125%;
   }
   .header .navbar-brand {
     width: 54% !important;
