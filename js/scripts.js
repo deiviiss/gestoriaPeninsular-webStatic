@@ -14,15 +14,15 @@ const formatterPeso = new Intl.NumberFormat('en-US', {
 
 //function focus & blur
 
-document.querySelector('input').addEventListener('focus', () => {
-  console.log('focus');
-  document.querySelector('.label').classList.toggle('active')
-})
+// document.querySelector('input').addEventListener('focus', () => {
+//   console.log('focus');
+//   document.querySelector('.label').classList.toggle('active')
+// })
 
-document.querySelector('input').addEventListener('blur', () => {
-  console.log('Blur')
-  document.querySelector('.label').classList.toggle('active')
-})
+// document.querySelector('input').addEventListener('blur', () => {
+//   console.log('Blur')
+//   document.querySelector('.label').classList.toggle('active')
+// })
 
 //>>>>>>>>>>>>>>>>>>calculadora
 

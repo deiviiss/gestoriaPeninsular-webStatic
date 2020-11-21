@@ -238,6 +238,9 @@ body .container-wrap {
 }
 
 @media (max-width: 425px) {
+  .header {
+    padding: 0;
+  }
   .header img {
     width: 125%;
   }
